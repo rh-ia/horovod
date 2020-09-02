@@ -135,13 +135,13 @@ TensorFlow
 .. code-block:: python
 
     opt = tf.train.AdamOptimizer(0.001)
-    opt = hvd.DistributedOptimizer(opt, backward_passes_per_step=5, op=hvd.AdaSum)
+    opt = hvd.DistributedOptimizer(opt, backward_passes_per_step=5, op=hvd.Adasum)
 
 -   Allreduce
 
 .. code-block:: python
     
-    hvd.allreduce(tensor, op=hvd.AdaSum)
+    hvd.allreduce(tensor, op=hvd.Adasum)
 
 PyTorch
 ^^^^^^^
